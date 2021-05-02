@@ -1,6 +1,10 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import "events";
 
+.body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .buffer-top {
   margin-top: 20px;
 }
@@ -42,7 +46,7 @@
   padding: 20px 4px 4px;
 }
 
-.navbar-nav li{
+.navbar-nav li {
   margin-right: 10px;
   display: inline-block;
 }
