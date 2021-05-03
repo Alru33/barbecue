@@ -1,5 +1,5 @@
 <%= form_for [@event, subscription] do |f| %>
-  <%= render partial: 'partials/form_errors', locals: { model: subscription } %>
+  <%= render partial: 'partials/form_errors' , locals: { model: subscription } %>
   <% unless user_signed_in? %>
     <div class="form-group">
       <%= f.label :user_name %>
@@ -12,7 +12,9 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit I18n.t('.subscribe'), class: 'btn btn-primary' %>
-  </div>
+  <% unless current_user_can_edit?(@event) %>
+      <div class="actions">
+        <%= f.submit t('.subscribe'), class: 'btn btn-primary' %>
+      </div>
+  <% end %>
 <% end %>

@@ -49,8 +49,8 @@
 
       <div class="form-group">
         <div class="col-10 mt-4">
-          <%= f.submit "Обновить", class: "btn btn-primary" %>
-          <%= link_to 'Вернуться', edit_user_path(@user), class: 'btn btn-secondary' %>
+          <%= f.submit t('.update'), class: "btn btn-primary" %>
+          <%= link_to t('.back'), edit_user_path(@user), class: 'btn btn-secondary' %>
         </div>
       </div>
     <% end %>
@@ -59,7 +59,8 @@
       <h3>Удалить аккаунт</h3>
       <div class="row">
         <div class="col-10 mt-2 mb-4">
-          <%= button_to "Удалить", registration_path(resource_name), class: "btn btn-danger",
+          <%= button_to t('.delete'), registration_path(resource_name), class: "btn
+          btn-danger",
             data: { confirm: "Are you sure?" }, method: :delete %>
         </div>
       </div>

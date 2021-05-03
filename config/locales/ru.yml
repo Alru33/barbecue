@@ -1,69 +1,84 @@
 ru:
   activerecord:
+    errors:
+      models:
+        subscription:
+          attributes:
+            error_email: "уже существует в БД, укажите другой email"
+            error_user: "Организатор не может быть подписан"
+
     models:
-      user: 'Пользователь'
-      event: 'Событие'
+      user: "Пользователь"
+      event: "Событие"
+
     attributes:
       user:
-        email: 'Email'
-        name: 'Имя'
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
+        email: "Email"
+        name: "Имя"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
       event:
-        title: 'Название'
-        address: 'Место проведения'
-        datetime: 'Дата и время'
-        description: 'Описание'
+        title: "Название"
+        address: "Место проведения"
+        datetime: "Дата и время"
+        description: "Описание"
 
   controllers:
     events:
-      created: 'Событие было успешно создано!'
-      updated: 'Вы обновили мероприятие'
-      destroyed: 'Вы удалили мероприятие :('
+      created: "Событие было успешно создано!"
+      updated: "Вы обновили мероприятие"
+      destroyed: "Вы удалили мероприятие :("
     users:
-      updated: 'Вы обновили свой профиль'
+      updated: "Вы обновили свой профиль"
     comments:
-      destroyed: 'Комментарий удален'
-      created: 'Ваш комментарий добавлен'
-      error: 'Ошибка с комментарием'
-    subscriptions:
-      created: 'Вы подписаны на это событие'
-      destroyed: 'Участник отписан'
-      error: 'Подписка/отписка не сработала'
+      destroyed: "Комментарий удален"
+      created: "Ваш комментарий добавлен"
+      error: "Ошибка с комментарием"
+    subscription:
+      created: "Вы подписаны на это событие"
+      destroyed: "Участник отписан"
+      error: "Подписка/отписка не сработала"
 
   app:
-    name: 'Шашлыки'
-    company: 'Хороший программист'
-    profile: 'Профиль'
-    exit: 'Выйти'
-    enter: 'Войти'
-    register: 'Зарегистрироваться'
+    name: "Шашлыки"
+    company: "Хороший программист"
+    profile: "Профиль"
+    exit: "Выйти"
+    enter: "Войти"
+    register: "Зарегистрироваться"
 
   comments:
     comment:
-      destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+      destroy_confirm: "Вы уверены, что хотите удалить этот комменатрий?"
+    form:
+      send: "Отправить"
 
   subscriptions:
+    form:
+      subscribe: "Подписаться"
     subscription:
-      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
-
-  subscribe: 'Подписаться'
-  send: 'Отправить'
-  save: 'Сохранить'
-  back: 'Вернуться'
+      destroy_confirm: "Вы уверены, что хотите удалить эту подписку?"
 
   delete:
     event: "Вы уверены, что хотите удалить это событие?"
 
   events:
     show:
-      edit: 'Изменить'
-      delete: 'Удалить'
+      edit: "Изменить"
+      delete: "Удалить"
+    index:
+      create_event: "Создать событие"
+    form:
+      save: "Сохранить"
+      back: "вернуться"
   users:
     show:
-      update: 'Редактировать профиль'
+      update: "Редактировать профиль"
     edit:
-      change_password: 'Изменить пароль'
+      change_password: "Изменить пароль"
+    form:
+      save: "Сохранить"
+      back: "Вернуться"
 
   devise:
     failure:
@@ -96,6 +111,10 @@ ru:
       send_paranoid_instructions: "Если ваш адрес электронной почты существует в базе данных, вы получите ссылку для восстановления пароля на свой адрес электронной почты через несколько минут."
       updated: "Ваш пароль был успешно изменен. Вы вошли в систему."
       updated_not_active: "Ваш пароль был успешно изменен."
+      new:
+        restore_password: "Восстановить пароль"
+      edit:
+        change_my_password: "Изменить пароль"
     registrations:
       destroyed: "До свидания! Ваша учетная запись была успешно удалена. Мы надеемся увидеть Вас снова.."
       signed_up: "Добро пожаловать! Вы успешно зарегистрировались."
@@ -106,10 +125,19 @@ ru:
       updated: "Ваша учетная запись была успешно обновлена."
       updated_but_not_signed_in: "Ваша учетная запись была успешно обновлена. Войдите в
        систему снова, поскольку пароль был изменен."
+      new:
+        forgot_your_password: "Забыли пароль?"
+        sign_in: "Зарегистрироваться"
+      edit:
+        back: "Вернуться"
+        delete: "Удалить"
+        update: "Обновить"
     sessions:
       signed_in: "Вход успешно выполнен."
       signed_out: "Вы успешно вышли."
       already_signed_out: "Вы уже вышли из системы."
+      new:
+        enter: "Войти"
     errors:
       messages:
         already_confirmed: "уже подтверждено, попробуйте войти"
@@ -121,3 +149,4 @@ ru:
           one: "У вас 1 ошибка:"
           few: "У вас %{count} ошибки:"
           other: "У вас %{count} ошибок:"
+

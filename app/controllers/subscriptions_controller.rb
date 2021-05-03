@@ -8,7 +8,7 @@ class SubscriptionsController < ApplicationController
     if @new_subscription.save
       redirect_to @event, notice: I18n.t('controllers.subscription.created')
     else
-      render 'events/show', alert: I18n.t('controllers.susbscription.error')
+      render 'events/show', alert: I18n.t('controllers.subscription.error')
     end
   end
 
