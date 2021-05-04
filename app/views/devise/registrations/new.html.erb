@@ -1,6 +1,6 @@
-<div class="container">
+<div class="row">
   <div class="col-10">
-    <h3 class="col-10 mt-4 mb-4">Регистрация пользователя</h3>
+    <h3 class="col-10 mt-4 mb-4"><%= t('devise.sessions.new.user_registration') %></h3>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <div class="col-12">
@@ -11,7 +11,7 @@
         <%= f.label :email, class: "col-2 col-form-label font-weight-bold" %>
         <div class="col-10">
           <%= f.email_field :email, class: "form-control shadow rounded", placeholder:
-            "Введите email" %>
+            t('.enter_your_email') %>
         </div>
       </div>
 
@@ -19,7 +19,7 @@
         <%= f.label :password, class: "col-2 col-form-label font-weight-bold" %>
         <div class="col-10">
           <%= f.password_field :password, class: "form-control shadow rounded",
-            placeholder: "Введите пароль" %>
+            placeholder: t('.enter_your_password') %>
         </div>
       </div>
 
@@ -28,7 +28,7 @@
         font-weight-bold" %>
         <div class="col-10">
           <%= f.password_field :password_confirmation, class: "form-control shadow rounded",
-            placeholder: "Подтвердите пароль" %>
+            placeholder: t('.confirm_your_password') %>
         </div>
       </div>
 

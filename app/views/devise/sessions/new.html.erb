@@ -1,13 +1,13 @@
-<div class="container">
+<div class="row">
   <div class="col-10">
-    <h3 class="col-10 mt-4 mb-4">Войти</h3>
+    <h3 class="col-2 mt-4 mb-4"><%= t('devise.sessions.new.enter') %></h3>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group">
         <%= f.label :email, class: "col-2 col-form-label font-weight-bold" %>
         <div class="col-10">
            <%= f.email_field :email, class: "form-control shadow rounded", placeholder:
-              "Введите email" %>
+             t('.enter_your_email') %>
         </div>
       </div>
 
@@ -15,16 +15,16 @@
         <%= f.label :password, class: "col-2 col-form-label font-weight-bold"  %>
         <div class="col-10">
           <%= f.password_field :password, class: "form-control shadow rounded", placeholder:
-            "Введите пароль" %>
+            t('.enter_your_password') %>
         </div>
       </div>
 
       <% if devise_mapping.rememberable? %>
         <div class="form-check">
-          <div class="col-10">
+          <div class="col-10 mb-4">
             <%= f.check_box :remember_me, class: "form-check-input shadow rounded" %>
           </div>
-          <%= f.label :remember_me, class: "col-3 form-check-label font-weight-bold"  %>
+          <%= f.label :remember_me, class: "col-4 form-check-label font-weight-bold"  %>
         </div>
       <% end %>
 

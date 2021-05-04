@@ -1,13 +1,12 @@
-<h2>Редактирование профиля</h2>
-
 <div class="row">
-  <div class="col-md-6 buffer-top">
+  <div class="col-8 buffer-top">
+    <h3 class="col-10 mb-4"><%= t('.edit_profile') %></h3>
     <%= render 'form' %>
 
     <p class="buffer-top">
-    <div class="col-10">
-      <%= link_to t('.change_password'), edit_user_registration_path %>
-    </div>
+      <div class="col-10">
+        <%= link_to t('.change_password'), edit_user_registration_path %>
+      </div>
     </p>
   </div>
 </div>

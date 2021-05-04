@@ -41,11 +41,12 @@ ru:
 
   app:
     name: "Шашлыки"
-    company: "Хороший программист"
+    company: "GoodProgrammer"
     profile: "Профиль"
     exit: "Выйти"
     enter: "Войти"
     register: "Зарегистрироваться"
+    year: "| 2021"
 
   comments:
     comment:
@@ -66,16 +67,29 @@ ru:
     show:
       edit: "Изменить"
       delete: "Удалить"
+      calling: "Зовет:"
+      went: "Пойдут:"
+      me_going: "Я пойду:"
     index:
       create_event: "Создать событие"
+      events: "События"
     form:
       save: "Сохранить"
       back: "вернуться"
+      or: "или "
+    edit:
+      edit_event: "Редактировать событие"
+    new:
+      new_event: "Новое событие"
+
   users:
     show:
-      update: "Редактировать профиль"
+      edit: "Редактировать профиль"
+      organized: "Организовал:"
+      organized_an_event: "Пользователь пока не организовал ни одного события"
     edit:
       change_password: "Изменить пароль"
+      edit_profile: "Редактирование профиля"
     form:
       save: "Сохранить"
       back: "Вернуться"
@@ -115,6 +129,11 @@ ru:
         restore_password: "Восстановить пароль"
       edit:
         change_my_password: "Изменить пароль"
+        change_password: "Изменить текущий пароль"
+        confirm_new_password: "Подтверждение нового пароля"
+        new_password: "Новый пароль"
+        characters_minimum: "символов минимум"
+
     registrations:
       destroyed: "До свидания! Ваша учетная запись была успешно удалена. Мы надеемся увидеть Вас снова.."
       signed_up: "Добро пожаловать! Вы успешно зарегистрировались."
@@ -128,9 +147,20 @@ ru:
       new:
         forgot_your_password: "Забыли пароль?"
         sign_in: "Зарегистрироваться"
+        enter_your_email: "Введите email"
+        enter_your_password: "Введите пароль"
+        confirm_your_password: "Подтвердите пароль"
       edit:
+        are_you_sure: "Вы уверены?"
         back: "Вернуться"
+        confirm_your_new_password: "Подтвердите новый пароль"
         delete: "Удалить"
+        delete_account: "Удалить учетную запись"
+        change_password: "Изменить текущий пароль"
+        enter_your_email: "Введите email"
+        enter_your_password: "Введите текущий пароль"
+        enter_your_new_password: "Введите новый пароль"
+        remain_field: "Оставьте поля пустыми, если не хотите менять пароль"
         update: "Обновить"
     sessions:
       signed_in: "Вход успешно выполнен."
@@ -138,6 +168,9 @@ ru:
       already_signed_out: "Вы уже вышли из системы."
       new:
         enter: "Войти"
+        enter_your_email: "Введите email"
+        enter_your_password: "Введите пароль"
+        user_registration: "Регистрация пользователя"
     errors:
       messages:
         already_confirmed: "уже подтверждено, попробуйте войти"
@@ -149,4 +182,8 @@ ru:
           one: "У вас 1 ошибка:"
           few: "У вас %{count} ошибки:"
           other: "У вас %{count} ошибок:"
-
+    shared:
+      links:
+        enter: "Войти"
+        sign_up: "Зарегистрироваться"
+        forgot_your_password: "Забыли пароль?"
