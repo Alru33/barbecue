@@ -9,8 +9,8 @@ class Subscription < ApplicationRecord
   validates :user, uniqueness: { scope: :event_id }, if: -> { user.present? }
   validates :user_email, uniqueness: { scope: :event_id }, unless: -> { user.present? }
 
-  validate :event_owner, if: -> { user.present? }
-  validate :email_is_occupied, if: -> { user.present? }
+  validate :event_owner, unless: -> { user.present? }
+  validate :email_is_occupied, unless: -> { user.present? }
 
   def user_name
     user&.name || super
@@ -23,10 +23,10 @@ class Subscription < ApplicationRecord
   private
 
   def event_owner
-    errors.add(:user_name, :error_user) if user == event.user
+    errors.add(:user_name, :error_name) if user_name == event.user.name
   end
 
   def email_is_occupied
-    errors.add(:user_email, :error_email) unless User.exists?(email: user_email)
+    errors.add(:user_email, :error_email) if User.exists?(email: user_email)
   end
 end

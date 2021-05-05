@@ -4,8 +4,10 @@ ru:
       models:
         subscription:
           attributes:
-            error_email: "уже существует в БД, укажите другой email"
-            error_user: "Организатор не может быть подписан"
+            user_email:
+              error_email: "уже существует в БД, укажите другой email"
+            user_name:
+              error_name: ", организатор не может быть подписан"
 
     models:
       user: "Пользователь"
