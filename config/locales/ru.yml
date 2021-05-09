@@ -12,9 +12,13 @@ ru:
     models:
       user: "Пользователь"
       event: "Событие"
+      subscription: "Подписка"
+      comment: "Комментарий"
+      photo: "Фотография"
 
     attributes:
       user:
+        avatar: 'Aватарка'
         email: "Email"
         name: "Имя"
         password: "Пароль"
@@ -24,6 +28,14 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+      photo:
+        photo: "Фотография"
+      comment:
+        user_name: "Ваше имя"
+        body: "Комментарий"
+      subscription:
+        user_name: "Ваше имя"
+        photo: "Фотография"
 
   controllers:
     events:
@@ -40,6 +52,10 @@ ru:
       created: "Вы подписаны на это событие"
       destroyed: "Участник отписан"
       error: "Подписка/отписка не сработала"
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
 
   app:
     name: "Шашлыки"
@@ -95,6 +111,12 @@ ru:
     form:
       save: "Сохранить"
       back: "Вернуться"
+
+  photos:
+    form:
+      loaded: "Загрузить"
+    photo:
+      added: "Добавил"
 
   devise:
     failure:
@@ -153,7 +175,7 @@ ru:
         enter_your_password: "Введите пароль"
         confirm_your_password: "Подтвердите пароль"
       edit:
-        are_you_sure: "Вы уверены?"
+        are_you_sure: "Вы уверены, что хотите удалить аккаунт?"
         back: "Вернуться"
         confirm_your_new_password: "Подтвердите новый пароль"
         delete: "Удалить"

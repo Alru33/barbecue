@@ -11,6 +11,8 @@ gem 'russian'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'twitter-bootstrap-rails'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :production do
   gem 'pg'
