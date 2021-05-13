@@ -16,6 +16,11 @@ ru:
       comment: "Комментарий"
       photo: "Фотография"
 
+    mailers:
+      new_subscription: "Новая подписка на #{event.title}"
+      new_comment: "Новый комментарий @ #{event.title}"
+
+
     attributes:
       user:
         avatar: 'Aватарка'
