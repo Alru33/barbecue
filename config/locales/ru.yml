@@ -16,25 +16,10 @@ ru:
       comment: "Комментарий"
       photo: "Фотография"
 
-    mailers:
+    mailer:
       event_mailer:
-        comment:
-          new_comment: "Новый комментарий @ #{event.title}"
-          title: 'Новый комментарий'
-          author: 'Автор'
-          event: 'Событие'
-          datetime: 'Состоится'
-          owner: 'Организатор'
-        subscription:
-          new_subscription: "Новая подписка на #{event.title}"
-          title: 'Новая подписка'
-          name: 'Имя'
-          email: 'Email'
-          author: 'Автор'
-          event: 'Событие'
-          datetime: 'Состоится'
-          owner: 'Организатор'
-
+        new_comment: "Новый комментарий @ #{event.title}"
+        new_subscription: "Новая подписка на #{event.title}"
 
     attributes:
       user:
@@ -85,6 +70,22 @@ ru:
     enter: "Войти"
     register: "Зарегистрироваться"
     year: "| 2021"
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
 
   comments:
     comment:
