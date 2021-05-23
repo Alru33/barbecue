@@ -79,19 +79,20 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'fun-party-barbecue.herokuapp.com' }
 
+  config.action_mailer.delivery_method = :mailjet
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :smtp
 
-  # Настройки для Sendgrid
+  # Настройки для Mailjet
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'heroku.com',
-    :enable_starttls_auto => true
+    address:        'in-v3.mailjet.com ',
+    port:             '587',
+    authentication:   :plain,
+    user_name:        ENV["MAILJET_API_KEY"],
+    password:         ENV["MAILJET_SECRET_KEY"],
+    domain:           'heroku.com',
+    enable_starttls_auto:   true
   }
 
   # Inserts middleware to perform automatic connection switching.

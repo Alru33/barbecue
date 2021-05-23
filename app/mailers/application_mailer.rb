@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'funparty@goodprogrammer.ru'
+  default from: ENV['MAILJET_SENDER']
   layout 'mailer'
 end
 
