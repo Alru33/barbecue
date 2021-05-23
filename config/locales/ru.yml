@@ -17,8 +17,23 @@ ru:
       photo: "Фотография"
 
     mailers:
-      new_subscription: "Новая подписка на #{event.title}"
-      new_comment: "Новый комментарий @ #{event.title}"
+      event_mailer:
+        comment:
+          new_comment: "Новый комментарий @ #{event.title}"
+          title: 'Новый комментарий'
+          author: 'Автор'
+          event: 'Событие'
+          datetime: 'Состоится'
+          owner: 'Организатор'
+        subscription:
+          new_subscription: "Новая подписка на #{event.title}"
+          title: 'Новая подписка'
+          name: 'Имя'
+          email: 'Email'
+          author: 'Автор'
+          event: 'Событие'
+          datetime: 'Состоится'
+          owner: 'Организатор'
 
 
     attributes:
@@ -164,7 +179,7 @@ ru:
         characters_minimum: "символов минимум"
 
     registrations:
-      destroyed: "До свидания! Ваша учетная запись была успешно удалена. Мы надеемся увидеть Вас снова.."
+      destroyed: "Ваша учетная запись была успешно удалена. Мы надеемся увидеть Вас снова.."
       signed_up: "Добро пожаловать! Вы успешно зарегистрировались."
       signed_up_but_inactive: "Вы успешно зарегистрировались. Однако вам не удалось войти в систему, потому что ваша учетная запись еще не активирована."
       signed_up_but_locked: "Вы успешно зарегистрировались. Однако нам не удалось войти, потому что ваша учетная запись заблокирована."
