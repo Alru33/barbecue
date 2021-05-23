@@ -80,13 +80,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'fun-party-barbecue.herokuapp.com' }
 
   config.action_mailer.delivery_method = :mailjet
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
 
   # Настройки для Mailjet
   ActionMailer::Base.smtp_settings = {
-    address:        'in-v3.mailjet.com ',
+    address:          'in-v3.mailjet.com ',
     port:             '587',
     authentication:   :plain,
     user_name:        ENV["MAILJET_API_KEY"],
