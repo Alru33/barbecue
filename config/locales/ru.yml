@@ -16,9 +16,9 @@ ru:
       comment: "Комментарий"
       photo: "Фотография"
 
-    mailer:
+    mailers:
       event_mailer:
-        new_comment: "Новый комментарий @ #{event.title}"
+        new_comment: "Новый комментарий @#{event.title}"
         new_subscription: "Новая подписка на #{event.title}"
 
     attributes:
