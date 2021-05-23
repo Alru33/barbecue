@@ -73,7 +73,7 @@ ru:
 
   event_mailer:
     comment:
-      new_comment: "Новый комментарий @#{event.title}"
+      new_comment: "Новый комментарий @ #{event.title}"
       title: 'Новый комментарий'
       author: 'Автор'
       event: 'Событие'
