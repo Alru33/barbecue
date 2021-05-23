@@ -16,11 +16,6 @@ ru:
       comment: "Комментарий"
       photo: "Фотография"
 
-    mailers:
-      event_mailer:
-        new_comment: "Новый комментарий @#{event.title}"
-        new_subscription: "Новая подписка на #{event.title}"
-
     attributes:
       user:
         avatar: 'Aватарка'
@@ -73,14 +68,14 @@ ru:
 
   event_mailer:
     comment:
-      new_comment: "Новый комментарий @ #{event.title}"
+      new_comment: "Новый комментарий %{event.title}"
       title: 'Новый комментарий'
       author: 'Автор'
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
     subscription:
-      new_subscription: "Новая подписка на #{event.title}"
+      new_subscription: "Новая подписка на %{event.title}"
       title: 'Новая подписка'
       name: 'Имя'
       email: 'Email'
