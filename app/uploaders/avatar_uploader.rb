@@ -9,7 +9,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   else
     storage :file
   end
-  storage :file
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -38,7 +37,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
 
   version :thumb do
-    process resize_to_fit: [100, 100]
+    process resize_to_fit: [50, 50]
   end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
