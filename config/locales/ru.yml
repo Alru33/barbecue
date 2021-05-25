@@ -68,14 +68,14 @@ ru:
 
   event_mailer:
     comment:
-      new_comment: "Новый комментарий @ %{event}"
+      new_comment: "Новый комментарий к событию %{title}"
       title: 'Новый комментарий'
       author: 'Автор'
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
     subscription:
-      new_subscription: "Новая подписка на %{event}"
+      new_subscription: "Новая подписка на событие %{title}"
       title: 'Новая подписка'
       name: 'Имя'
       email: 'Email'
@@ -84,7 +84,7 @@ ru:
       datetime: 'Состоится'
       owner: 'Организатор'
     photo:
-      new_photo: "Новая фотография на %{event}"
+      new_photo: "Новая фотография к событию %{title}"
       title: 'Новая подписка'
       name: 'Имя'
       email: 'Email'
