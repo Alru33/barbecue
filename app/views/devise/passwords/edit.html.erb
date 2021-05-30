@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-10">
-    <h4 class="col-2 mt-4 mb-8"><%= t('devise.passwords.edit.change_my_password') %></h4>
+    <h4 class="col-6 mt-4 mb-4"><%= t('devise.passwords.edit.change_my_password') %></h4>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
       <div class="form-group">
